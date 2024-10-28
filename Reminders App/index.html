@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Reminders App</h1>
+
+    <!-- Alarm Form -->
+    <div>
+        <label for="hours">Hours:</label>
+        <input type="number" id="hours" min="0" max="23" placeholder="HH">
+        
+        <label for="minutes">Minutes:</label>
+        <input type="number" id="minutes" min="0" max="59" placeholder="MM">
+        
+        <label for="seconds">Seconds:</label>
+        <input type="number" id="seconds" min="0" max="59" placeholder="SS">
+
+        <label>
+            <input type="checkbox" id="day-set"> Set Day
+        </label>
+        
+        <input type="date" id="alarm-day" disabled>
+        
+        <button onclick="setAlarm()">Set Alarm</button>
+
+
+    </div>
+    
+    <!-- Reminders List Table -->
+    <h2>Reminders</h2>
+    <table id="reminders-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="reminders-body">
+            <!-- Reminders will be loaded here -->
+        </tbody>
+    </table>
+
+    <h1>Countdown Timer</h1>
+
+    <!-- Countdown Timer Input Section -->
+    <div>
+        <label for="countdown-hours">Hours:</label>
+        <input type="number" id="countdown-hours" min="0" max="23" placeholder="HH">
+
+        <label for="countdown-minutes">Minutes:</label>
+        <input type="number" id="countdown-minutes" min="0" max="59" placeholder="MM">
+
+        <label for="countdown-seconds">Seconds:</label>
+        <input type="number" id="countdown-seconds" min="0" max="59" placeholder="SS">
+        
+        <button onclick="startCountdown()">Start Countdown</button>
+    </div>
+
+    <!-- Display Countdown Timer -->
+    <h2>Time Remaining: <span id="countdown-display">00:00:00</span></h2>
+    
+    <!-- Stop Alarm Button -->
+    <button onclick="stopAlarm()" id="stop-alarm-btn" style="display:none;">Stop Alarm</button>
+
+    <!-- Alarm Sound Element -->
+    <audio id="alarm-sound" src="alarm3.wav" preload="auto"></audio>
+
+    <script src="countdown.js"></script>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>

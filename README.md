@@ -4,6 +4,12 @@
 
 ![Image2](https://github.com/user-attachments/assets/78fed9d7-ec78-4e43-b1cf-f8baa359dfb0)
 
+
+
+https://github.com/user-attachments/assets/ca0f4fb8-5209-4ef6-bb28-fae85fe31cbd
+
+
+
 ## 🚀 Reminders App - Operation
 
 This reminders app is a countdown timer and alarm system with data storage capabilities, allowing users to set reminders, store them in a database, edit or delete reminders, and play an alarm sound when the countdown finishes. Here’s a breakdown of how it all works across each component:

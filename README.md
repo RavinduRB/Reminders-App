@@ -1,5 +1,9 @@
 # 🚀 Reminders App
 
+How are you guys 👋. I have been a bit busy these days with academic studies, so it took me a while to create a new design. So, today I created a Reminders web application 🚀.
+
+This Reminders App lets you set customizable countdowns with alarm notifications and create scheduled reminders for specific dates and times. With an easy-to-use interface, you can start countdowns, receive alerts when they finish, and manage a list of reminders with options to edit or delete them. Reminders are saved for future reference, providing a convenient way to keep track of important tasks and deadlines.
+
 ![Image1](https://github.com/user-attachments/assets/841b0699-15d4-48a5-9587-467d9214f160)
 
 ![Image2](https://github.com/user-attachments/assets/78fed9d7-ec78-4e43-b1cf-f8baa359dfb0)

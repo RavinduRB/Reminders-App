@@ -99,3 +99,29 @@ function deleteReminder(id) {
         loadReminders();
     };
 }
+
+// Add this function in script.js to play alarm when the reminder time matches the current time
+function checkReminders() {
+    const now = new Date();
+    const currentDay = now.toISOString().split('T')[0];
+    const currentTime = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
+    
+    const transaction = db.transaction(["reminders"]);
+    const objectStore = transaction.objectStore("reminders");
+
+    objectStore.openCursor().onsuccess = (event) => {
+        const cursor = event.target.result;
+        if (cursor) {
+            const reminder = cursor.value;
+            if (reminder.day === currentDay && reminder.time === currentTime) {
+                alarmSound.play();  // Play the alarm sound
+                document.getElementById('stop-alarm-btn').style.display = 'block'; // Show Stop Alarm button
+            }
+            cursor.continue();
+        }
+    };
+}
+
+// Call the checkReminders function every second to match current time with reminders
+setInterval(checkReminders, 1000);
+
